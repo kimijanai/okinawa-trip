@@ -15,12 +15,13 @@
             background-color: #f5f9fc;
         }
         header {
-            background-color: #0077b6;
+            background: linear-gradient(135deg, #0077b6, #00b4d8);
             color: white;
-            padding: 20px;
+            padding: 30px;
             text-align: center;
             border-radius: 10px;
             margin-bottom: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         h1, h2, h3, h4 {
             color: #0077b6;
@@ -38,6 +39,10 @@
             padding: 20px;
             margin-bottom: 20px;
             flex: 1 1 300px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
         }
         .full-width {
             flex: 1 1 100%;
@@ -50,6 +55,12 @@
         }
         .tips-card {
             border-left: 5px solid #4cc9f0;
+        }
+        .food-card {
+            border-left: 5px solid #ff9e00;
+        }
+        .weather-card {
+            border-left: 5px solid #38b000;
         }
         .map-container {
             width: 100%;
@@ -105,40 +116,57 @@
             text-align: center;
             margin-top: 50px;
             padding: 20px;
-            background-color: #0077b6;
+            background: linear-gradient(135deg, #0077b6, #00b4d8);
             color: white;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .nav-container {
+            margin-bottom: 30px;
         }
         .tab {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 5px;
+            border-radius: 10px;
             overflow: hidden;
-            border: 1px solid #ccc;
-            background-color: #f1f1f1;
-            border-radius: 5px 5px 0 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .tab button {
-            background-color: inherit;
-            float: left;
+            background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
             border: none;
             outline: none;
             cursor: pointer;
-            padding: 14px 16px;
-            transition: 0.3s;
-            font-size: 17px;
+            padding: 15px 25px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: bold;
+            color: #495057;
+            flex-grow: 1;
+            text-align: center;
+            border-bottom: 3px solid transparent;
         }
         .tab button:hover {
-            background-color: #ddd;
+            background: linear-gradient(to bottom, #e9ecef, #dee2e6);
+            color: #0077b6;
         }
         .tab button.active {
-            background-color: #0077b6;
+            background: linear-gradient(to bottom, #0077b6, #0096c7);
             color: white;
+            border-bottom: 3px solid #023e8a;
         }
         .tabcontent {
             display: none;
             padding: 20px;
             border: 1px solid #ccc;
-            border-top: none;
-            border-radius: 0 0 5px 5px;
+            border-radius: 0 0 10px 10px;
             background-color: white;
+            animation: fadeEffect 1s;
+        }
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
         .phrase-table {
             width: 100%;
@@ -149,6 +177,35 @@
         }
         .phrase-table tr:nth-child(even) {
             background-color: #f2f2f2;
+        }
+        .food-img {
+            width: 100%;
+            height: 150px;
+            background-color: #ffedd8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            color: #6c757d;
+        }
+        .weather-icon {
+            font-size: 36px;
+            margin-right: 10px;
+        }
+        .temp-range {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+        .temp-high {
+            color: #e63946;
+            font-weight: bold;
+        }
+        .temp-low {
+            color: #457b9d;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -192,12 +249,16 @@
         </div>
     </div>
 
-    <div class="tab">
-        <button class="tablinks" onclick="openTab(event, 'Itinerary')" id="defaultOpen">Itinerary</button>
-        <button class="tablinks" onclick="openTab(event, 'RainyDay')">Rainy Day Plan</button>
-        <button class="tablinks" onclick="openTab(event, 'Attractions')">Attractions</button>
-        <button class="tablinks" onclick="openTab(event, 'TravelTips')">Travel Tips</button>
-        <button class="tablinks" onclick="openTab(event, 'UsefulPhrases')">Useful Phrases</button>
+    <div class="nav-container">
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Itinerary')" id="defaultOpen">Itinerary</button>
+            <button class="tablinks" onclick="openTab(event, 'RainyDay')">Rainy Day Plan</button>
+            <button class="tablinks" onclick="openTab(event, 'Attractions')">Attractions</button>
+            <button class="tablinks" onclick="openTab(event, 'Food')">Local Cuisine</button>
+            <button class="tablinks" onclick="openTab(event, 'Weather')">Weather</button>
+            <button class="tablinks" onclick="openTab(event, 'TravelTips')">Travel Tips</button>
+            <button class="tablinks" onclick="openTab(event, 'UsefulPhrases')">Useful Phrases</button>
+        </div>
     </div>
 
     <div id="Itinerary" class="tabcontent">
@@ -280,8 +341,8 @@
                 </tr>
                 <tr>
                     <td>12:30-13:30</td>
-                    <td>Lunch at one of the cafés near Kouri Beach</td>
-                    <td></td>
+                    <td>Lunch at Cafe Terrace La Tida</td>
+                    <td>Casual cafe with ocean views and kid-friendly menu options</td>
                 </tr>
                 <tr>
                     <td>13:30-14:30</td>
@@ -300,8 +361,8 @@
                 </tr>
                 <tr>
                     <td>18:00-19:00</td>
-                    <td>Dinner at restaurant near aquarium</td>
-                    <td></td>
+                    <td>Dinner at Cafe Ocean Blue</td>
+                    <td>Located inside the aquarium complex with a kids' menu and high chairs</td>
                 </tr>
                 <tr>
                     <td>19:00-20:30</td>
@@ -398,8 +459,8 @@
                 </tr>
                 <tr>
                     <td>12:00-13:00</td>
-                    <td>Lunch at family-friendly restaurant on Kokusai Street</td>
-                    <td></td>
+                    <td>Lunch at Yunangi</td>
+                    <td>Traditional Okinawan restaurant with private rooms suitable for families</td>
                 </tr>
                 <tr>
                     <td>13:00-14:30</td>
@@ -728,6 +789,261 @@
                 <p><strong>Facilities:</strong> Numerous restaurants, shops, restrooms, some areas with seating.</p>
                 <p><strong>Best for toddlers:</strong> The covered shopping arcades provide shelter from sun or rain, and there are many colorful displays to keep little ones entertained.</p>
             </div>
+        </div>
+    </div>
+
+    <div id="Food" class="tabcontent">
+        <h2>Okinawan Cuisine & Restaurant Recommendations</h2>
+        
+        <div class="container">
+            <div class="card food-card">
+                <h3>Must-Try Okinawan Dishes</h3>
+                <div class="food-img">
+                    <p>Image: Traditional Okinawan cuisine spread</p>
+                </div>
+                <ul>
+                    <li><strong>Goya Champuru (ゴーヤーチャンプルー)</strong> - Okinawa's signature stir-fry dish made with bitter melon, tofu, eggs, and pork. The word "champuru" means "mix" in the Okinawan dialect.</li>
+                    <li><strong>Okinawa Soba (沖縄そば)</strong> - Unlike mainland Japanese soba, Okinawan soba uses wheat noodles in a pork-based broth, topped with stewed pork belly (rafute), fish cake, and green onions.</li>
+                    <li><strong>Rafute (ラフテー)</strong> - Tender pork belly simmered in soy sauce, brown sugar, and awamori (Okinawan rice liquor). This melt-in-your-mouth dish is a staple at Okinawan celebrations.</li>
+                    <li><strong>Taco Rice (タコライス)</strong> - A fusion dish created in the 1960s near American military bases. It combines taco fillings (seasoned ground beef, lettuce, tomato, cheese) served over rice instead of a taco shell.</li>
+                    <li><strong>Umibudo (海ぶどう)</strong> - Known as "sea grapes" or "green caviar," these are small, edible seaweed that pop in your mouth like caviar. Usually served with ponzu sauce.</li>
+                </ul>
+            </div>
+
+            <div class="card food-card">
+                <h3>Toddler-Friendly Okinawan Foods</h3>
+                <div class="food-img">
+                    <p>Image: Kid-friendly Okinawan dishes</p>
+                </div>
+                <p>These dishes are generally suitable for a 1-year-old:</p>
+                <ul>
+                    <li><strong>Okinawa Soba</strong> - The soft noodles and tender pork can be cut into small pieces for toddlers.</li>
+                    <li><strong>Rafute</strong> - The melt-in-your-mouth pork belly is easy for young children to eat.</li>
+                    <li><strong>Jimami Tofu (ジーマミー豆腐)</strong> - Peanut tofu with a soft texture and slightly sweet taste.</li>
+                    <li><strong>Steamed Rice</strong> - A safe staple available at most restaurants.</li>
+                    <li><strong>Tropical Fruits</strong> - Okinawa is known for delicious mangoes, pineapples, and other fruits that can be cut into small pieces.</li>
+                </ul>
+                <p><strong>Note:</strong> Always check for potential allergens, especially with peanut-based dishes like Jimami Tofu.</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card food-card">
+                <h3>Recommended Restaurants Near Your Hotel (Chatan)</h3>
+                <div class="food-img">
+                    <p>Image: Family-friendly restaurant in Chatan</p>
+                </div>
+                <table>
+                    <tr>
+                        <th>Restaurant</th>
+                        <th>Cuisine</th>
+                        <th>Family-Friendly Features</th>
+                        <th>Address & Hours</th>
+                    </tr>
+                    <tr>
+                        <td><strong>COCO'S Chatan</strong></td>
+                        <td>Family Restaurant (Japanese/Western)</td>
+                        <td>High chairs, kids' menu, spacious seating</td>
+                        <td>1-5-1 Mihama, Chatan<br>7:00-24:00 daily</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sam's by the Sea, Awase</strong></td>
+                        <td>Seafood</td>
+                        <td>Boat-themed interior, ocean views, high chairs</td>
+                        <td>3-1-10 Awase, Okinawa City<br>17:00-22:00 (Closed Mondays)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Oceans Pizza</strong></td>
+                        <td>Pizza/Italian</td>
+                        <td>Casual atmosphere, outdoor seating, kid-friendly menu</td>
+                        <td>1-5-7 Mihama, Chatan<br>11:30-22:00 daily</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fisherman's Wharf</strong></td>
+                        <td>Seafood/International</td>
+                        <td>Ocean views, spacious seating, children's options</td>
+                        <td>Mihama American Village, Chatan<br>11:00-23:00 daily</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card food-card">
+                <h3>Restaurants at Key Locations</h3>
+                <div class="food-img">
+                    <p>Image: Restaurant with ocean view</p>
+                </div>
+                <h4>Near Kouri Island</h4>
+                <ul>
+                    <li><strong>Cafe Terrace La Tida</strong> - Casual cafe with ocean views and kid-friendly menu options.
+                        <br>Address: 538 Kouri, Nakijin Village | Hours: 10:00-18:00</li>
+                    <li><strong>Restaurant Shirasa</strong> - Serves local Okinawan cuisine with a view of Kouri Bridge.
+                        <br>Address: 156 Kouri, Nakijin Village | Hours: 11:00-17:00</li>
+                </ul>
+                
+                <h4>Near Churaumi Aquarium</h4>
+                <ul>
+                    <li><strong>Cafe Ocean Blue</strong> - Located inside the aquarium complex with a kids' menu and high chairs.
+                        <br>Address: Inside Okinawa Churaumi Aquarium, Motobu | Hours: 10:00-18:00</li>
+                    <li><strong>Restaurant Inoh</strong> - Family-friendly restaurant serving Okinawan cuisine near the aquarium.
+                        <br>Address: 424 Ishikawa, Motobu | Hours: 11:00-21:00</li>
+                </ul>
+                
+                <h4>In Naha</h4>
+                <ul>
+                    <li><strong>Yunangi</strong> - Traditional Okinawan restaurant with private rooms suitable for families.
+                        <br>Address: 3-1-6 Makishi, Naha | Hours: 11:30-15:00, 17:00-22:00</li>
+                    <li><strong>Makishi Public Market Food Court</strong> - Second floor of the market where you can buy fresh seafood on the first floor and have it cooked upstairs. Casual atmosphere good for families.
+                        <br>Address: 2-10-1 Matsuo, Naha | Hours: 8:00-22:00</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card food-card">
+            <h3>Dining Tips with a Toddler in Okinawa</h3>
+            <ul>
+                <li><strong>Timing:</strong> Eat dinner early (before 6:30 PM) to avoid crowds and ensure restaurants are still open.</li>
+                <li><strong>Reservations:</strong> For popular restaurants, especially on weekends, consider making reservations in advance.</li>
+                <li><strong>Family Restaurant Chains:</strong> Chains like COCO'S, Joyfull, and Gusto reliably offer high chairs, kids' menus, and family-friendly facilities.</li>
+                <li><strong>Food Courts:</strong> Shopping mall food courts (like those in Aeon Mall) offer variety and a casual atmosphere where toddler noise won't be an issue.</li>
+                <li><strong>Portion Sizes:</strong> Many restaurants offer set meals that can be shared with a toddler.</li>
+                <li><strong>Snacks:</strong> Carry familiar snacks for your toddler to avoid hunger meltdowns during sightseeing.</li>
+                <li><strong>Local Beverages for Kids:</strong> Try Sanpin Tea (jasmine tea) or Shikuwasa Juice (local citrus) which are refreshing and suitable for children.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="Weather" class="tabcontent">
+        <h2>Okinawa Weather Information</h2>
+        
+        <div class="card weather-card">
+            <h3>Weather Overview for Your Trip (May 30-June 2)</h3>
+            <p>Your trip falls at the beginning of Okinawa's rainy season, but this doesn't mean constant rain. Here's what to expect:</p>
+            
+            <div class="temp-range">
+                <span><i class="weather-icon">☀️</i> <span class="temp-high">High: 27-29°C (81-84°F)</span></span>
+                <span><i class="weather-icon">🌙</i> <span class="temp-low">Low: 22-24°C (72-75°F)</span></span>
+            </div>
+            
+            <table>
+                <tr>
+                    <th>Weather Factor</th>
+                    <th>Details</th>
+                </tr>
+                <tr>
+                    <td><strong>Rainfall</strong></td>
+                    <td>
+                        Late May to Late June is rainy season (Tsuyu)<br>
+                        Average 12-16 rainy days per month<br>
+                        Often short, intense showers rather than all-day rain
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Humidity</strong></td>
+                    <td>
+                        Average 75-85%<br>
+                        Warm and muggy, especially after rainfall
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Sunshine</strong></td>
+                    <td>
+                        Average 5-6 hours of sunshine per day<br>
+                        UV Index: Very high (8-10)
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>Ocean Temperature</strong></td>
+                    <td>
+                        24-26°C (75-79°F)<br>
+                        Comfortable for swimming
+                    </td>
+                </tr>
+            </table>
+            
+            <h4>Typical Daily Pattern</h4>
+            <ul>
+                <li>Mornings often start clear and sunny</li>
+                <li>Afternoon showers are common, sometimes intense but usually brief</li>
+                <li>Evenings may clear up again</li>
+                <li>Occasional full sunny days between rain periods</li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <div class="card weather-card">
+                <h3>Packing Recommendations</h3>
+                <h4>Essential Items</h4>
+                <ul>
+                    <li>Light, breathable clothing (cotton, linen)</li>
+                    <li>Light rain jacket or poncho (for adults and child)</li>
+                    <li>Compact umbrella</li>
+                    <li>Waterproof phone case/bag</li>
+                    <li>Quick-dry clothing</li>
+                    <li>Sun protection (high SPF sunscreen, hats, sunglasses)</li>
+                    <li>Insect repellent (humidity brings mosquitoes)</li>
+                </ul>
+                
+                <h4>For Beach Days</h4>
+                <ul>
+                    <li>UV-protective swimwear</li>
+                    <li>Water shoes (for rocky beaches)</li>
+                    <li>Quick-dry towels</li>
+                    <li>Waterproof beach bag</li>
+                </ul>
+                
+                <h4>For Your Toddler</h4>
+                <ul>
+                    <li>Light, breathable clothes with UV protection</li>
+                    <li>Sun hat with neck protection</li>
+                    <li>Waterproof stroller cover</li>
+                    <li>Extra changes of clothes (humidity can make children uncomfortable)</li>
+                </ul>
+            </div>
+
+            <div class="card weather-card">
+                <h3>Weather-Related Travel Tips</h3>
+                <h4>Planning Your Days</h4>
+                <ul>
+                    <li>Check daily weather forecasts each morning</li>
+                    <li>Plan indoor activities for afternoons when showers are more likely</li>
+                    <li>Take advantage of clear mornings for outdoor activities</li>
+                    <li>Have your rainy day alternatives ready (as provided in your itinerary)</li>
+                </ul>
+                
+                <h4>Driving in Rain</h4>
+                <ul>
+                    <li>Allow extra travel time during rainy conditions</li>
+                    <li>Be cautious on mountain roads which can become slippery</li>
+                    <li>Turn headlights on during rain (required by law in Japan)</li>
+                    <li>Maintain greater following distance</li>
+                </ul>
+                
+                <h4>Health Considerations</h4>
+                <ul>
+                    <li>Stay hydrated (the humid climate can cause dehydration even when it doesn't feel hot)</li>
+                    <li>Take breaks in air-conditioned spaces during particularly humid days</li>
+                    <li>Watch for signs of heat exhaustion, even on cloudy days</li>
+                    <li>Apply sunscreen regularly, even when cloudy (UV rays penetrate cloud cover)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card weather-card">
+            <h3>Typhoon Information</h3>
+            <p>While early June is not peak typhoon season (which typically runs from July to October), occasional early typhoons can occur:</p>
+            <ul>
+                <li>Typhoon forecasts are very reliable and provided 3-5 days in advance</li>
+                <li>Major hotels and tourist facilities are well-prepared for typhoon situations</li>
+                <li>If a typhoon warning is issued, follow all local guidance and shelter advisories</li>
+                <li>Consider travel insurance that covers weather-related disruptions</li>
+            </ul>
+            
+            <h4>Weather Resources</h4>
+            <ul>
+                <li><strong>Japan Meteorological Agency:</strong> www.jma.go.jp/jma/indexe.html (English available)</li>
+                <li><strong>Okinawa Weather App:</strong> "Okinawa Weather" available on iOS and Android</li>
+                <li><strong>Emergency Weather Alerts:</strong> Will be sent to all mobile phones in the area (even foreign phones)</li>
+            </ul>
         </div>
     </div>
 
