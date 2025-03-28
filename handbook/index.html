@@ -176,14 +176,10 @@
         }
         .food-img {
             width: 100%;
-            height: 150px;
-            background-color: #ffedd8;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            height: 200px;
+            object-fit: cover;
             border-radius: 5px;
             margin-bottom: 10px;
-            color: #6c757d;
         }
         .weather-icon {
             font-size: 36px;
@@ -206,13 +202,22 @@
         .beach-img {
             width: 100%;
             height: 200px;
-            background-color: #caf0f8;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 200px;
+            background-color: #e9ecef;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: 5px;
             margin-bottom: 10px;
             color: #6c757d;
+            text-align: center;
+            padding: 10px;
         }
     </style>
 </head>
@@ -273,6 +278,9 @@
         
         <div class="card day-card">
             <h3>Day 1 (Friday, May 30): Arrival & Southern Okinawa Beaches</h3>
+            <div class="image-placeholder">
+                <p>Araha Beach - A family-friendly beach with shallow waters and playground, perfect for toddlers</p>
+            </div>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14319.256618239133!2d127.74830714863282!3d26.301599999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5131a5d9283f5%3A0x1a8b8df6bea8d7c4!2sAraha%20Beach!5e0!3m2!1sen!2sus!4v1711580246161!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -325,6 +333,18 @@
 
         <div class="card day-card">
             <h3>Day 2 (Saturday, May 31): Northern Okinawa & Island Hopping</h3>
+            <div class="container">
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>Sesoko Beach - White sand beach with clear water and coral reefs visible from shore</p>
+                    </div>
+                </div>
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>Kouri Beach - Crystal clear waters with heart-shaped rocks and panoramic ocean views</p>
+                    </div>
+                </div>
+            </div>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d115003.84196347312!2d127.86577678418!3d26.665499999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x34e4565d9e0f3a6f%3A0x2c7d6c5e4a5e9d2!2sSesoko%20Beach%2C%20Motobu%2C%20Kunigami%20District%2C%20Okinawa%2C%20Japan!3m2!1d26.6363!2d127.8658!4m5!1s0x34e4f5e8b6a6a7d7%3A0x18f6dd9e213cdf76!2sKouri%20Beach%2C%20Kouri%2C%20Nakijin%2C%20Kunigami%20District%2C%20Okinawa%2C%20Japan!3m2!1d26.6947!2d128.0144!5e0!3m2!1sen!2sus!4v1711580329849!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -392,8 +412,20 @@
 
         <div class="card day-card">
             <h3>Day 3 (Sunday, June 1): Central Okinawa Family Activities</h3>
+            <div class="container">
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>Nago Pineapple Park - Ride pineapple-shaped carts through tropical gardens</p>
+                    </div>
+                </div>
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>Southeast Botanical Gardens - Beautiful collection of tropical and subtropical plants</p>
+                    </div>
+                </div>
+            </div>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d115003.84196347312!2d127.86577678418!3d26.665499999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x34e4f8b0a2f1b9c9%3A0x5d5c5b0d7c1b9b1a!2sNago%20Pineapple%20Park%2C%20Biimata%2C%20Nago%2C%20Okinawa%2C%20Japan!3m2!1d26.5919!2d127.9975!4m5!1s0x34e4f8b0a2f1b9c9%3A0x5d5c5b0d7c1b9b1a!2sSoutheast%20Botanical%20Gardens%2C%20Chibana%2C%20Okinawa%2C%20Japan!3m2!1d26.3236!2d127.8255!4m5!1s0x34e4f8b0a2f1b9c9%3A0x5d5c5b0d7c1b9b1a!2sBlue%20Seal%20Ice%20Park%2C%20Goya%2C%20Okinawa%2C%20Japan!3m2!1d26.3119!2d127.7956!5e0!3m2!1sen!2sus!4v1711580329849!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d115003.84196347312!2d127.86577678418!3d26.665499999999998!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x34e4f8b0a2f1b9c9%3A0x5d5c5b0d7c1b9b1a!2sNago%20Pineapple%20Park%2C%20Biimata%2C%20Nago%2C%20Okinawa%2C%20Japan!3m2!1d26.5919!2d127.9975!4m5!1s0x34e4f8b0a2f1b9c9%3A0x5d5c5b0d7c1b9b1a!2sSoutheast%20Botanical%20Gardens%2C%20Chibana%2C%20Okinawa%2C%20Japan!3m2!1d26.3236!2d127.8255!5e0!3m2!1sen!2sus!4v1711580329849!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <table>
                 <tr>
@@ -422,24 +454,24 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td>13:30-15:30</td>
-                    <td>Explore Southeast Botanical Gardens</td>
+                    <td>13:30-16:30</td>
+                    <td>Explore Southeast Botanical Gardens at a relaxed pace</td>
                     <td>Stroll through tropical plants and flowers, visit water garden</td>
                 </tr>
                 <tr>
-                    <td>15:30-16:30</td>
-                    <td>Drive to Blue Seal Ice Park</td>
+                    <td>16:30-17:00</td>
+                    <td>Optional visit to the garden gift shop for souvenirs</td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>16:30-17:30</td>
-                    <td>Visit Blue Seal Ice Park for ice cream making experience</td>
-                    <td>Fun activity for the whole family</td>
+                    <td>17:00-18:30</td>
+                    <td>Drive back to Chatan area</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>18:00-19:30</td>
-                    <td>Dinner at Fisherman's Wharf</td>
-                    <td>Family-friendly restaurant with ocean views</td>
+                    <td>18:30-20:00</td>
+                    <td>Dinner at family-friendly restaurant near hotel</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>20:00</td>
@@ -448,12 +480,24 @@
                 </tr>
             </table>
             <div class="highlight">
-                <p><strong>Day 3 Highlights:</strong> Experience Okinawa's unique human-made attractions including the fun Pineapple Park with its quirky carts, the beautiful Southeast Botanical Gardens with its tropical plants, and the delicious Blue Seal Ice Park where you can make your own ice cream.</p>
+                <p><strong>Day 3 Highlights:</strong> Experience Okinawa's unique human-made attractions including the fun Pineapple Park with its quirky carts and the beautiful Southeast Botanical Gardens with its tropical plants. Enjoy a more relaxed pace at the gardens with plenty of time to explore the different themed areas and water features.</p>
             </div>
         </div>
 
         <div class="card day-card">
             <h3>Day 4 (Monday, June 2): Naha City & Departure</h3>
+            <div class="container">
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>Makishi Public Market - Local food stalls, fresh seafood, and tropical fruits</p>
+                    </div>
+                </div>
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>Shurijo Castle Park - Historic site with beautiful gardens and architecture</p>
+                    </div>
+                </div>
+            </div>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d14343.00968749999!2d127.67830000000001!3d26.2169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x34e56bde4a249ebf%3A0x36bad9bfd65b9d54!2sMakishi%20Public%20Market%2C%20Matsuo%2C%20Naha%2C%20Okinawa%2C%20Japan!3m2!1d26.2167!2d127.6833!4m5!1s0x34e56bd83ef005fd%3A0x37a8bd0e5aafc403!2sShurijo%20Castle%2C%20Shurikinjocho%2C%20Naha%2C%20Okinawa%2C%20Japan!3m2!1d26.2172!2d127.7192!5e0!3m2!1sen!2sus!4v1711580437142!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -539,13 +583,12 @@
                 </tr>
                 <tr>
                     <td>Attractions</td>
-                    <td>18,600</td>
+                    <td>15,000</td>
                     <td>
                         Beach/Island Entrance Fees (5,000)<br>
                         Nago Pineapple Park (3,000)<br>
                         Southeast Botanical Gardens (2,400)<br>
-                        Blue Seal Ice Park (3,000)<br>
-                        Other attractions (5,200)
+                        Other attractions (4,600)
                     </td>
                 </tr>
                 <tr>
@@ -560,7 +603,7 @@
                 </tr>
                 <tr>
                     <td><strong>Total</strong></td>
-                    <td><strong>146,200</strong></td>
+                    <td><strong>142,600</strong></td>
                     <td>Within 130,000¥-150,000¥ budget range</td>
                 </tr>
             </table>
@@ -572,6 +615,9 @@
         
         <div class="card rainy-card">
             <h3>Day 1 Alternative: Arrival & Southern Okinawa</h3>
+            <div class="image-placeholder">
+                <p>Aeon Mall Okinawa Rycom - Large indoor shopping mall with family-friendly facilities</p>
+            </div>
             <div class="highlight">
                 <p><strong>Original Plan:</strong> Araha Beach</p>
                 <p><strong>Rainy Day Alternative:</strong> Aeon Mall Okinawa Rycom</p>
@@ -597,6 +643,18 @@
 
         <div class="card rainy-card">
             <h3>Day 2 Alternative: Northern Okinawa</h3>
+            <div class="container">
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>Okinawa Churaumi Aquarium - One of Japan's largest aquariums with massive tanks</p>
+                    </div>
+                </div>
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>Ryukyu Mura - Cultural theme park with traditional Okinawan houses</p>
+                    </div>
+                </div>
+            </div>
             <div class="highlight">
                 <p><strong>Original Plan:</strong> Sesoko Island, Kouri Island</p>
                 <p><strong>Rainy Day Alternative:</strong> Okinawa Churaumi Aquarium, Ryukyu Mura</p>
@@ -635,9 +693,21 @@
 
         <div class="card rainy-card">
             <h3>Day 3 Alternative: Central Okinawa</h3>
+            <div class="container">
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>Okinawa World - Cultural theme park with the 800-meter long Gyokusendo Cave</p>
+                    </div>
+                </div>
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>Iias Okinawa Toyosaki Mall - Indoor shopping and entertainment complex</p>
+                    </div>
+                </div>
+            </div>
             <div class="highlight">
-                <p><strong>Original Plan:</strong> Nago Pineapple Park, Southeast Botanical Gardens, Blue Seal Ice Park</p>
-                <p><strong>Rainy Day Alternative:</strong> Okinawa World, DFS Galleria, Shopping Mall</p>
+                <p><strong>Original Plan:</strong> Nago Pineapple Park, Southeast Botanical Gardens</p>
+                <p><strong>Rainy Day Alternative:</strong> Okinawa World, Shopping Malls</p>
             </div>
             <table>
                 <tr>
@@ -661,7 +731,7 @@
                 </tr>
                 <tr>
                     <td>14:00-16:00</td>
-                    <td>Visit DFS Galleria or AEON Mall</td>
+                    <td>Visit Iias Okinawa Toyosaki Mall</td>
                     <td>
                         Indoor shopping and entertainment<br>
                         Kids' play areas available<br>
@@ -673,6 +743,18 @@
 
         <div class="card rainy-card">
             <h3>Day 4 Alternative: Naha City & Departure</h3>
+            <div class="container">
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>Okinawa Prefectural Museum & Art Museum - Learn about Okinawan history and culture</p>
+                    </div>
+                </div>
+                <div style="flex: 1 1 48%;">
+                    <div class="image-placeholder">
+                        <p>DFS Galleria Okinawa - Duty-free shopping in a covered environment</p>
+                    </div>
+                </div>
+            </div>
             <div class="highlight">
                 <p><strong>Original Plan:</strong> Makishi Public Market, Kokusai Street, Shurijo Castle</p>
                 <p><strong>Rainy Day Alternative:</strong> Okinawa Prefectural Museum & Art Museum, DFS Galleria</p>
@@ -750,8 +832,8 @@
         <div class="container">
             <div class="card">
                 <h3>Araha Beach</h3>
-                <div class="beach-img">
-                    <p>Image: Araha Beach with gentle waters and playground</p>
+                <div class="image-placeholder">
+                    <p>Araha Beach with gentle waters and playground</p>
                 </div>
                 <p>Located in Chatan, close to your hotel, Araha Beach is one of the most family-friendly beaches in Okinawa. It features a very gentle slope into the water, making it perfect for toddlers to play safely. The beach has clean, soft sand and a playground nearby.</p>
                 <p><strong>Highlights:</strong> Very shallow water entry, playground equipment, nearby cafes and restaurants, beautiful sunset views.</p>
@@ -761,8 +843,8 @@
 
             <div class="card">
                 <h3>Sesoko Island & Beach</h3>
-                <div class="beach-img">
-                    <p>Image: Sesoko Beach with white sand and clear waters</p>
+                <div class="image-placeholder">
+                    <p>Sesoko Beach with white sand and clear waters</p>
                 </div>
                 <p>Sesoko Island is connected to the main island by the 762-meter Sesoko Bridge. The beach features white sand and crystal clear waters with coral reefs visible from the shore. It's less crowded than many main island beaches, offering a more natural experience.</p>
                 <p><strong>Highlights:</strong> Scenic bridge drive, clear waters, coral reefs visible from shore, natural setting.</p>
@@ -772,8 +854,8 @@
 
             <div class="card">
                 <h3>Kouri Island & Beach</h3>
-                <div class="beach-img">
-                    <p>Image: Kouri Beach with heart-shaped rocks and crystal clear waters</p>
+                <div class="image-placeholder">
+                    <p>Kouri Beach with heart-shaped rocks and crystal clear waters</p>
                 </div>
                 <p>Kouri Island is connected to Yagaji Island by the 2km-long Kouri Bridge, offering spectacular ocean views during the drive. The beach is known for its white sand, crystal clear waters, and famous heart-shaped rocks. The island has a relaxed atmosphere with several cafes offering ocean views.</p>
                 <p><strong>Highlights:</strong> Heart-shaped rock formations, shallow waters ideal for toddlers, beautiful views of the Kouri Bridge.</p>
@@ -785,8 +867,8 @@
         <div class="container">
             <div class="card">
                 <h3>Nago Pineapple Park</h3>
-                <div class="beach-img">
-                    <p>Image: Pineapple-shaped carts at Nago Pineapple Park</p>
+                <div class="image-placeholder">
+                    <p>Pineapple-shaped carts at Nago Pineapple Park</p>
                 </div>
                 <p>Nago Pineapple Park is a quirky and fun attraction dedicated to Okinawa's famous pineapples. Visitors ride in pineapple-shaped carts through tropical gardens filled with pineapple plants. The park also offers pineapple product tastings, including pineapple wine for adults and pineapple juice for children.</p>
                 <p><strong>Highlights:</strong> Pineapple-shaped cart ride, tropical garden tour, product tastings, gift shop with unique pineapple products.</p>
@@ -796,8 +878,8 @@
 
             <div class="card">
                 <h3>Southeast Botanical Gardens</h3>
-                <div class="beach-img">
-                    <p>Image: Tropical plants at Southeast Botanical Gardens</p>
+                <div class="image-placeholder">
+                    <p>Tropical plants at Southeast Botanical Gardens</p>
                 </div>
                 <p>The Southeast Botanical Gardens feature a beautiful collection of tropical and subtropical plants spread across 40 hectares. The gardens include a water lily pond, palm tree garden, and various themed areas. It's a peaceful place to stroll and enjoy nature in a more controlled environment.</p>
                 <p><strong>Highlights:</strong> Tropical plants and flowers, water garden, themed areas, seasonal flower displays.</p>
@@ -806,14 +888,14 @@
             </div>
 
             <div class="card">
-                <h3>Blue Seal Ice Park</h3>
-                <div class="beach-img">
-                    <p>Image: Ice cream making at Blue Seal Ice Park</p>
+                <h3>Makishi Public Market</h3>
+                <div class="image-placeholder">
+                    <p>Colorful food stalls at Makishi Public Market</p>
                 </div>
-                <p>Blue Seal is Okinawa's famous ice cream brand, and at the Ice Park, visitors can learn about ice cream making and even create their own flavors. The facility includes a factory tour, ice cream making workshop, and of course, plenty of opportunities to taste different flavors.</p>
-                <p><strong>Highlights:</strong> Ice cream making workshop, factory tour, tasting various flavors, gift shop with exclusive items.</p>
-                <p><strong>Facilities:</strong> Restrooms, ice cream shop, gift shop, air-conditioned interior.</p>
-                <p><strong>Best for toddlers:</strong> Colorful environment, sweet treats, sensory experiences with different flavors and textures.</p>
+                <p>Located in the heart of Naha, Makishi Public Market is often called "Okinawa's Kitchen." The first floor features fresh seafood, meat, produce, and local specialties, while the second floor houses restaurants where you can have your purchases cooked to order.</p>
+                <p><strong>Highlights:</strong> Local food stalls, fresh seafood, tropical fruits, authentic Okinawan cuisine.</p>
+                <p><strong>Facilities:</strong> Restrooms, food court on second floor, nearby shops.</p>
+                <p><strong>Best for toddlers:</strong> Colorful displays, interesting sights and sounds, second-floor restaurants with high chairs.</p>
             </div>
         </div>
 
@@ -854,8 +936,17 @@
         <div class="container">
             <div class="card food-card">
                 <h3>Must-Try Okinawan Dishes</h3>
-                <div class="food-img">
-                    <p>Image: Traditional Okinawan cuisine spread</p>
+                <div class="container">
+                    <div style="flex: 1 1 48%;">
+                        <div class="image-placeholder">
+                            <p>Goya Champuru - Okinawa's signature stir-fry with bitter melon, tofu, eggs, and pork</p>
+                        </div>
+                    </div>
+                    <div style="flex: 1 1 48%;">
+                        <div class="image-placeholder">
+                            <p>Okinawa Soba - Wheat noodles in pork-based broth with stewed pork belly</p>
+                        </div>
+                    </div>
                 </div>
                 <ul>
                     <li><strong>Goya Champuru (ゴーヤーチャンプルー)</strong> - Okinawa's signature stir-fry dish made with bitter melon, tofu, eggs, and pork. The word "champuru" means "mix" in the Okinawan dialect.</li>
@@ -868,8 +959,8 @@
 
             <div class="card food-card">
                 <h3>Toddler-Friendly Okinawan Foods</h3>
-                <div class="food-img">
-                    <p>Image: Kid-friendly Okinawan dishes</p>
+                <div class="image-placeholder">
+                    <p>Kid-friendly Okinawan dishes including soft Rafute (pork belly) and Jimami Tofu</p>
                 </div>
                 <p>These dishes are generally suitable for a 1-year-old:</p>
                 <ul>
@@ -886,8 +977,8 @@
         <div class="container">
             <div class="card food-card">
                 <h3>Recommended Restaurants Near Your Hotel (Chatan)</h3>
-                <div class="food-img">
-                    <p>Image: Family-friendly restaurant in Chatan</p>
+                <div class="image-placeholder">
+                    <p>Family-friendly restaurant in Chatan with ocean views</p>
                 </div>
                 <table>
                     <tr>
@@ -925,8 +1016,8 @@
 
             <div class="card food-card">
                 <h3>Restaurants at Key Locations</h3>
-                <div class="food-img">
-                    <p>Image: Restaurant with ocean view</p>
+                <div class="image-placeholder">
+                    <p>Restaurant with ocean view near Kouri Island</p>
                 </div>
                 <h4>Near Kouri Island</h4>
                 <ul>
@@ -973,6 +1064,9 @@
         
         <div class="card weather-card">
             <h3>Weather Overview for Your Trip (May 30-June 2)</h3>
+            <div class="image-placeholder">
+                <p>Okinawa's subtropical climate with blue skies and occasional rain showers</p>
+            </div>
             <p>Your trip falls at the beginning of Okinawa's rainy season, but this doesn't mean constant rain. Here's what to expect:</p>
             
             <div class="temp-range">
@@ -1109,6 +1203,9 @@
         <div class="container">
             <div class="card tips-card">
                 <h3>Before You Go</h3>
+                <div class="image-placeholder">
+                    <p>Family with toddler packing essentials for a beach vacation</p>
+                </div>
                 <ul>
                     <li><strong>Packing Essentials:</strong>
                         <ul>
@@ -1126,6 +1223,9 @@
 
             <div class="card tips-card">
                 <h3>Transportation</h3>
+                <div class="image-placeholder">
+                    <p>Family with toddler in rental car with child seat</p>
+                </div>
                 <ul>
                     <li><strong>Car Rental:</strong> Highly recommended for families with toddlers. Allows flexibility with nap schedules and carrying baby supplies.</li>
                     <li><strong>Car Seats:</strong> Rental companies provide child seats, but confirm availability when booking.</li>
@@ -1138,6 +1238,9 @@
         <div class="container">
             <div class="card tips-card">
                 <h3>Baby Supplies in Okinawa</h3>
+                <div class="image-placeholder">
+                    <p>Japanese baby products including diapers and baby food</p>
+                </div>
                 <ul>
                     <li><strong>Diapers:</strong> Japanese brands like Merries, Moony, and Goo.n are excellent quality and widely available at drugstores and supermarkets.</li>
                     <li><strong>Baby Food:</strong> Available at supermarkets and drugstores. Look for brands like Kewpie and Wakodo.</li>
@@ -1148,6 +1251,9 @@
 
             <div class="card tips-card">
                 <h3>Beach Tips with Toddlers</h3>
+                <div class="image-placeholder">
+                    <p>Family with toddler enjoying a shallow beach area with shade</p>
+                </div>
                 <ul>
                     <li><strong>Timing:</strong> Visit beaches in the morning when temperatures are milder.</li>
                     <li><strong>Shade:</strong> Bring or rent a beach umbrella or tent for sun protection.</li>
@@ -1161,6 +1267,9 @@
         <div class="container">
             <div class="card tips-card">
                 <h3>Dining with Toddlers</h3>
+                <div class="image-placeholder">
+                    <p>Family-friendly restaurant with high chairs and kids' menu</p>
+                </div>
                 <ul>
                     <li><strong>High Chairs:</strong> Available at most family restaurants but not guaranteed at smaller establishments.</li>
                     <li><strong>Kid-Friendly Restaurants:</strong>
@@ -1178,6 +1287,9 @@
 
             <div class="card tips-card">
                 <h3>Health and Safety</h3>
+                <div class="image-placeholder">
+                    <p>First aid kit with baby-specific items</p>
+                </div>
                 <ul>
                     <li><strong>Sun Protection:</strong> Okinawa's UV index is high year-round. Apply sunscreen frequently and keep babies in shade when possible.</li>
                     <li><strong>Hydration:</strong> Carry water bottles and offer drinks frequently, especially in warmer months.</li>
