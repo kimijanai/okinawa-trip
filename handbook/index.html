@@ -65,13 +65,9 @@
         .map-container {
             width: 100%;
             height: 400px;
-            background-color: #e9ecef;
             margin-bottom: 20px;
             border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #6c757d;
+            overflow: hidden;
         }
         .attraction-img {
             width: 100%;
@@ -207,6 +203,17 @@
             color: #457b9d;
             font-weight: bold;
         }
+        .beach-img {
+            width: 100%;
+            height: 200px;
+            background-color: #caf0f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            color: #6c757d;
+        }
     </style>
 </head>
 <body>
@@ -218,7 +225,7 @@
     <div class="container">
         <div class="card full-width">
             <h2>Trip Overview</h2>
-            <p>Welcome to your personalized Okinawa travel handbook! This guide has been created specifically for your family trip with your 1-year-old daughter. Inside you'll find your detailed itinerary, attraction information, rainy day alternatives, and helpful tips for traveling with a toddler in Okinawa.</p>
+            <p>Welcome to your personalized Okinawa travel handbook! This guide has been created specifically for your family trip with your 1-year-old daughter, focusing on natural attractions and beautiful beaches for Days 1, 2, and 4, with human-made facilities for Day 3. Inside you'll find your detailed itinerary, attraction information, rainy day alternatives, and helpful tips for traveling with a toddler in Okinawa.</p>
             
             <h3>Trip Details</h3>
             <table>
@@ -253,7 +260,7 @@
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'Itinerary')" id="defaultOpen">Itinerary</button>
             <button class="tablinks" onclick="openTab(event, 'RainyDay')">Rainy Day Plan</button>
-            <button class="tablinks" onclick="openTab(event, 'Attractions')">Attractions</button>
+            <button class="tablinks" onclick="openTab(event, 'Attractions')">Beaches & Islands</button>
             <button class="tablinks" onclick="openTab(event, 'Food')">Local Cuisine</button>
             <button class="tablinks" onclick="openTab(event, 'Weather')">Weather</button>
             <button class="tablinks" onclick="openTab(event, 'TravelTips')">Travel Tips</button>
@@ -265,9 +272,9 @@
         <h2>Your 4-Day Itinerary</h2>
         
         <div class="card day-card">
-            <h3>Day 1 (Friday, May 30): Arrival & Southern Okinawa</h3>
+            <h3>Day 1 (Friday, May 30): Arrival & Southern Okinawa Beaches</h3>
             <div class="map-container">
-                <p>Interactive Map: Day 1 Route - Naha Airport to Chatan</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14319.256618239133!2d127.74830714863282!3d26.301599999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e5131a5d9283f5%3A0x1a8b8df6bea8d7c4!2sAraha%20Beach!5e0!3m2!1sen!2sus!4v1711580246161!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <table>
                 <tr>
@@ -297,13 +304,13 @@
                 </tr>
                 <tr>
                     <td>16:00-18:00</td>
-                    <td>Visit nearby Chatan Seaside Park</td>
+                    <td>Visit Araha Beach</td>
                     <td>Family-friendly beach with gentle waters and playground</td>
                 </tr>
                 <tr>
                     <td>18:00-19:30</td>
-                    <td>Dinner at Sam's by the Sea, Awase</td>
-                    <td>Family-friendly restaurant with seafood options</td>
+                    <td>Dinner at nearby restaurant</td>
+                    <td>Several family-friendly options within walking distance</td>
                 </tr>
                 <tr>
                     <td>20:00</td>
@@ -311,12 +318,15 @@
                     <td>Considering jet lag and toddler's schedule</td>
                 </tr>
             </table>
+            <div class="highlight">
+                <p><strong>Araha Beach Highlights:</strong> Gentle slope into water, clean sand, playground nearby, very shallow entry area perfect for 1-year-olds, beautiful sunset views.</p>
+            </div>
         </div>
 
         <div class="card day-card">
-            <h3>Day 2 (Saturday, May 31): Northern Okinawa & Kouri Beach</h3>
+            <h3>Day 2 (Saturday, May 31): Northern Okinawa & Island Hopping</h3>
             <div class="map-container">
-                <p>Interactive Map: Day 2 Route - Chatan to Kouri Island to Churaumi Aquarium</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d115003.84196347312!2d127.86577678418!3d26.665499999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x34e4565d9e0f3a6f%3A0x2c7d6c5e4a5e9d2!2sSesoko%20Beach%2C%20Motobu%2C%20Kunigami%20District%2C%20Okinawa%2C%20Japan!3m2!1d26.6363!2d127.8658!4m5!1s0x34e4f5e8b6a6a7d7%3A0x18f6dd9e213cdf76!2sKouri%20Beach%2C%20Kouri%2C%20Nakijin%2C%20Kunigami%20District%2C%20Okinawa%2C%20Japan!3m2!1d26.6947!2d128.0144!5e0!3m2!1sen!2sus!4v1711580329849!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <table>
                 <tr>
@@ -330,52 +340,60 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td>09:00-10:30</td>
-                    <td>Drive to Kouri Island</td>
-                    <td>Approximately 1.5 hours from Chatan (75 km)</td>
+                    <td>09:00-10:00</td>
+                    <td>Drive to Sesoko Island via Sesoko Bridge</td>
+                    <td>Scenic drive across the 762-meter bridge with ocean views</td>
                 </tr>
                 <tr>
-                    <td>10:30-12:30</td>
+                    <td>10:00-12:00</td>
+                    <td>Explore Sesoko Beach</td>
+                    <td>White sand, clear water, coral reefs visible from shore</td>
+                </tr>
+                <tr>
+                    <td>12:00-13:00</td>
+                    <td>Picnic lunch at Sesoko Beach or local café</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>13:00-14:00</td>
+                    <td>Drive to Kouri Island via Kouri Bridge</td>
+                    <td>Scenic 2km bridge drive with panoramic ocean views</td>
+                </tr>
+                <tr>
+                    <td>14:00-16:00</td>
                     <td>Explore Kouri Beach</td>
-                    <td>Enjoy the translucent waters, fine sand, and famous heart-shaped rocks</td>
+                    <td>White sand, crystal clear waters, heart-shaped rocks</td>
                 </tr>
                 <tr>
-                    <td>12:30-13:30</td>
-                    <td>Lunch at Cafe Terrace La Tida</td>
-                    <td>Casual cafe with ocean views and kid-friendly menu options</td>
+                    <td>16:00-16:30</td>
+                    <td>Visit Kouri Ocean Tower observation deck (optional)</td>
+                    <td>Panoramic views of surrounding islands</td>
                 </tr>
                 <tr>
-                    <td>13:30-14:30</td>
-                    <td>Visit Kouri Ocean Tower</td>
-                    <td>Panoramic views and seashell museum (interesting for children)</td>
+                    <td>16:30-17:30</td>
+                    <td>Drive to Yagaji Island</td>
+                    <td>Connected by bridge to Kouri, scenic coastal drive</td>
                 </tr>
                 <tr>
-                    <td>14:30-16:00</td>
-                    <td>Drive to Churaumi Aquarium</td>
-                    <td>Approximately 30 minutes from Kouri Island (20 km)</td>
-                </tr>
-                <tr>
-                    <td>16:00-18:00</td>
-                    <td>Explore Churaumi Aquarium</td>
-                    <td>See whale sharks, coral reef exhibits, and outdoor playground</td>
-                </tr>
-                <tr>
-                    <td>18:00-19:00</td>
-                    <td>Dinner at Cafe Ocean Blue</td>
-                    <td>Located inside the aquarium complex with a kids' menu and high chairs</td>
+                    <td>17:30-19:00</td>
+                    <td>Dinner at local restaurant with ocean view</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>19:00-20:30</td>
                     <td>Drive back to hotel</td>
-                    <td>Approximately 1.5 hours (80 km)</td>
+                    <td></td>
                 </tr>
             </table>
+            <div class="highlight">
+                <p><strong>Island Hopping Highlights:</strong> Experience multiple islands connected by scenic bridges, enjoy different beaches with unique characteristics, and take in breathtaking ocean views throughout the day.</p>
+            </div>
         </div>
 
         <div class="card day-card">
             <h3>Day 3 (Sunday, June 1): Central Okinawa Family Activities</h3>
             <div class="map-container">
-                <p>Interactive Map: Day 3 Route - Chatan to Nago to Southeast Botanical Gardens</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m34!1m12!1m3!1d115003.84196347312!2d127.86577678418!3d26.665499999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m19!3e0!4m5!1s0x34e4f8b0a2f1b9c9%3A0x5d5c5b0d7c1b9b1a!2sNago%20Pineapple%20Park%2C%20Biimata%2C%20Nago%2C%20Okinawa%2C%20Japan!3m2!1d26.5919!2d127.9975!4m5!1s0x34e4f8b0a2f1b9c9%3A0x5d5c5b0d7c1b9b1a!2sSoutheast%20Botanical%20Gardens%2C%20Chibana%2C%20Okinawa%2C%20Japan!3m2!1d26.3236!2d127.8255!4m5!1s0x34e4f8b0a2f1b9c9%3A0x5d5c5b0d7c1b9b1a!2sBlue%20Seal%20Ice%20Park%2C%20Goya%2C%20Okinawa%2C%20Japan!3m2!1d26.3119!2d127.7956!5e0!3m2!1sen!2sus!4v1711580329849!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <table>
                 <tr>
@@ -391,12 +409,12 @@
                 <tr>
                     <td>09:30-11:30</td>
                     <td>Visit Nago Pineapple Park</td>
-                    <td>Ride pineapple-shaped carts, explore tropical gardens, sample treats</td>
+                    <td>Ride pineapple-shaped carts, explore tropical gardens</td>
                 </tr>
                 <tr>
                     <td>11:30-12:30</td>
                     <td>Drive to Southeast Botanical Gardens</td>
-                    <td>Approximately 45 minutes (35 km)</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>12:30-13:30</td>
@@ -406,17 +424,17 @@
                 <tr>
                     <td>13:30-15:30</td>
                     <td>Explore Southeast Botanical Gardens</td>
-                    <td>Stroll through tropical plants, visit water garden, plenty of shade</td>
+                    <td>Stroll through tropical plants and flowers, visit water garden</td>
                 </tr>
                 <tr>
                     <td>15:30-16:30</td>
                     <td>Drive to Blue Seal Ice Park</td>
-                    <td>Approximately 30 minutes (20 km)</td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td>16:30-17:30</td>
-                    <td>Visit Blue Seal Ice Park</td>
-                    <td>Ice cream making experience</td>
+                    <td>Visit Blue Seal Ice Park for ice cream making experience</td>
+                    <td>Fun activity for the whole family</td>
                 </tr>
                 <tr>
                     <td>18:00-19:30</td>
@@ -429,12 +447,15 @@
                     <td></td>
                 </tr>
             </table>
+            <div class="highlight">
+                <p><strong>Day 3 Highlights:</strong> Experience Okinawa's unique human-made attractions including the fun Pineapple Park with its quirky carts, the beautiful Southeast Botanical Gardens with its tropical plants, and the delicious Blue Seal Ice Park where you can make your own ice cream.</p>
+            </div>
         </div>
 
         <div class="card day-card">
             <h3>Day 4 (Monday, June 2): Naha City & Departure</h3>
             <div class="map-container">
-                <p>Interactive Map: Day 4 Route - Chatan to Naha City to Airport</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d14343.00968749999!2d127.67830000000001!3d26.2169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x34e56bde4a249ebf%3A0x36bad9bfd65b9d54!2sMakishi%20Public%20Market%2C%20Matsuo%2C%20Naha%2C%20Okinawa%2C%20Japan!3m2!1d26.2167!2d127.6833!4m5!1s0x34e56bd83ef005fd%3A0x37a8bd0e5aafc403!2sShurijo%20Castle%2C%20Shurikinjocho%2C%20Naha%2C%20Okinawa%2C%20Japan!3m2!1d26.2172!2d127.7192!5e0!3m2!1sen!2sus!4v1711580437142!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
             <table>
                 <tr>
@@ -449,32 +470,37 @@
                 </tr>
                 <tr>
                     <td>09:00-10:00</td>
-                    <td>Drive to Naha City</td>
-                    <td>Approximately 40 minutes (17 km)</td>
+                    <td>Drive to Naha City at a relaxed pace</td>
+                    <td>Scenic coastal route with ocean views</td>
                 </tr>
                 <tr>
                     <td>10:00-12:00</td>
-                    <td>Visit Kokusai Street Shopping District</td>
-                    <td>Souvenir shopping, local culture, Makishi Public Market</td>
+                    <td>Visit Makishi Public Market</td>
+                    <td>Local food stalls, fresh seafood, tropical fruits</td>
                 </tr>
                 <tr>
                     <td>12:00-13:00</td>
-                    <td>Lunch at Yunangi</td>
-                    <td>Traditional Okinawan restaurant with private rooms suitable for families</td>
+                    <td>Lunch at Makishi Public Market food court (2nd floor)</td>
+                    <td>Experience having seafood purchased downstairs cooked fresh</td>
                 </tr>
                 <tr>
                     <td>13:00-14:30</td>
-                    <td>Optional: Visit Shurijo Castle Park (if time permits)</td>
-                    <td>Participate in stamp rally, learn about Okinawan history</td>
+                    <td>Stroll along Kokusai Street (International Street)</td>
+                    <td>Okinawa's main shopping street with local crafts and souvenirs</td>
                 </tr>
                 <tr>
                     <td>14:30-15:30</td>
-                    <td>Drive to Naha Airport, return rental car</td>
-                    <td>Approximately 15 minutes (5 km)</td>
+                    <td>Optional visit to Shurijo Castle Park area (if time permits)</td>
+                    <td>Historic site with beautiful gardens and architecture</td>
                 </tr>
                 <tr>
-                    <td>15:30-16:40</td>
-                    <td>Check-in for flight, last-minute shopping at airport</td>
+                    <td>15:30-16:00</td>
+                    <td>Drive to Naha Airport</td>
+                    <td>Short 10-minute drive</td>
+                </tr>
+                <tr>
+                    <td>16:00-16:40</td>
+                    <td>Return rental car, check-in for flight</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -483,6 +509,9 @@
                     <td>Flight ANA 472</td>
                 </tr>
             </table>
+            <div class="highlight">
+                <p><strong>Naha City Highlights:</strong> Experience local culture at Makishi Public Market, enjoy souvenir shopping on Kokusai Street, and potentially visit the historic Shurijo Castle Park area before your departure.</p>
+            </div>
         </div>
 
         <div class="card">
@@ -511,7 +540,13 @@
                 <tr>
                     <td>Attractions</td>
                     <td>18,600</td>
-                    <td>Entrance fees for all planned activities</td>
+                    <td>
+                        Beach/Island Entrance Fees (5,000)<br>
+                        Nago Pineapple Park (3,000)<br>
+                        Southeast Botanical Gardens (2,400)<br>
+                        Blue Seal Ice Park (3,000)<br>
+                        Other attractions (5,200)
+                    </td>
                 </tr>
                 <tr>
                     <td>Food</td>
@@ -538,7 +573,7 @@
         <div class="card rainy-card">
             <h3>Day 1 Alternative: Arrival & Southern Okinawa</h3>
             <div class="highlight">
-                <p><strong>Original Plan:</strong> Chatan Seaside Park</p>
+                <p><strong>Original Plan:</strong> Araha Beach</p>
                 <p><strong>Rainy Day Alternative:</strong> Aeon Mall Okinawa Rycom</p>
             </div>
             <table>
@@ -563,8 +598,8 @@
         <div class="card rainy-card">
             <h3>Day 2 Alternative: Northern Okinawa</h3>
             <div class="highlight">
-                <p><strong>Original Plan:</strong> Kouri Beach, Kouri Ocean Tower, Churaumi Aquarium</p>
-                <p><strong>Rainy Day Alternative:</strong> Churaumi Aquarium (extended), Ryukyu Mura, Blue Seal Ice Park</p>
+                <p><strong>Original Plan:</strong> Sesoko Island, Kouri Island</p>
+                <p><strong>Rainy Day Alternative:</strong> Okinawa Churaumi Aquarium, Ryukyu Mura</p>
             </div>
             <table>
                 <tr>
@@ -574,11 +609,11 @@
                 </tr>
                 <tr>
                     <td>10:00-12:30</td>
-                    <td>Okinawa Churaumi Aquarium (extended visit)</td>
+                    <td>Okinawa Churaumi Aquarium</td>
                     <td>
-                        Still viable in rain as it's mostly indoor<br>
-                        Spend extra time at indoor exhibits<br>
-                        Watch scheduled dolphin and sea lion shows
+                        Indoor marine exhibits with massive tanks<br>
+                        Watch scheduled dolphin and sea lion shows<br>
+                        Toddler-friendly with colorful fish displays
                     </td>
                 </tr>
                 <tr>
@@ -595,19 +630,14 @@
                         Souvenir shopping in the dome-type facility
                     </td>
                 </tr>
-                <tr>
-                    <td>16:30-18:00</td>
-                    <td>Visit Blue Seal Ice Park</td>
-                    <td>Ice cream making experience (indoor activity)</td>
-                </tr>
             </table>
         </div>
 
         <div class="card rainy-card">
             <h3>Day 3 Alternative: Central Okinawa</h3>
             <div class="highlight">
-                <p><strong>Original Plan:</strong> Nago Pineapple Park, Southeast Botanical Gardens</p>
-                <p><strong>Rainy Day Alternative:</strong> Nago Pineapple Park (partially covered), Okinawa World, Glass-making workshop</p>
+                <p><strong>Original Plan:</strong> Nago Pineapple Park, Southeast Botanical Gardens, Blue Seal Ice Park</p>
+                <p><strong>Rainy Day Alternative:</strong> Okinawa World, DFS Galleria, Shopping Mall</p>
             </div>
             <table>
                 <tr>
@@ -616,12 +646,7 @@
                     <th>Notes</th>
                 </tr>
                 <tr>
-                    <td>09:30-11:30</td>
-                    <td>Nago Pineapple Park</td>
-                    <td>Partially viable in rain as it has covered cart rides</td>
-                </tr>
-                <tr>
-                    <td>12:00-14:00</td>
+                    <td>10:00-12:30</td>
                     <td>Visit Okinawa World</td>
                     <td>
                         Explore the 800-meter long Gyokusendo Cave (completely sheltered from rain)<br>
@@ -630,17 +655,18 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>14:30-16:00</td>
-                    <td>Visit glass-making workshop in Naha or Chatan</td>
-                    <td>
-                        Create personalized glass souvenirs<br>
-                        Indoor activity perfect for rainy days
-                    </td>
+                    <td>12:30-13:30</td>
+                    <td>Lunch at Okinawa World restaurant</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>16:30-18:00</td>
-                    <td>Shopping and dinner at Kokusai Street's covered shopping arcades</td>
-                    <td></td>
+                    <td>14:00-16:00</td>
+                    <td>Visit DFS Galleria or AEON Mall</td>
+                    <td>
+                        Indoor shopping and entertainment<br>
+                        Kids' play areas available<br>
+                        Various dining options
+                    </td>
                 </tr>
             </table>
         </div>
@@ -648,8 +674,8 @@
         <div class="card rainy-card">
             <h3>Day 4 Alternative: Naha City & Departure</h3>
             <div class="highlight">
-                <p><strong>Original Plan:</strong> Kokusai Street Shopping, Shurijo Castle</p>
-                <p><strong>Rainy Day Alternative:</strong> Okinawa Prefectural Museum & Art Museum, Makishi Public Market, DFS Galleria</p>
+                <p><strong>Original Plan:</strong> Makishi Public Market, Kokusai Street, Shurijo Castle</p>
+                <p><strong>Rainy Day Alternative:</strong> Okinawa Prefectural Museum & Art Museum, DFS Galleria</p>
             </div>
             <table>
                 <tr>
@@ -658,7 +684,7 @@
                     <th>Notes</th>
                 </tr>
                 <tr>
-                    <td>09:30-11:30</td>
+                    <td>10:00-12:00</td>
                     <td>Okinawa Prefectural Museum & Art Museum</td>
                     <td>
                         Learn about Okinawan history and culture<br>
@@ -667,12 +693,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>11:30-13:00</td>
-                    <td>Lunch and shopping at Makishi Public Market</td>
-                    <td>Covered market</td>
+                    <td>12:00-13:00</td>
+                    <td>Lunch at museum café</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td>13:00-14:30</td>
+                    <td>13:00-15:00</td>
                     <td>DFS Galleria Okinawa</td>
                     <td>
                         Last-minute souvenir shopping in covered environment<br>
@@ -719,76 +745,106 @@
     </div>
 
     <div id="Attractions" class="tabcontent">
-        <h2>Key Attractions</h2>
+        <h2>Beaches, Islands & Attractions</h2>
         
         <div class="container">
             <div class="card">
-                <h3>Kouri Beach</h3>
-                <div class="attraction-img" style="background-color: #caf0f8; display: flex; justify-content: center; align-items: center;">
-                    <p>Image: Kouri Beach with crystal clear waters and heart-shaped rocks</p>
+                <h3>Araha Beach</h3>
+                <div class="beach-img">
+                    <p>Image: Araha Beach with gentle waters and playground</p>
                 </div>
-                <p>Located at Kouri Island, connected by the 2 km-long Kouri Bridge. Features translucent water, marine leisure activities, and boutique cafes and eateries within walking distance. The beach is known for its fine white sand and crystal clear waters, making it perfect for families with young children.</p>
+                <p>Located in Chatan, close to your hotel, Araha Beach is one of the most family-friendly beaches in Okinawa. It features a very gentle slope into the water, making it perfect for toddlers to play safely. The beach has clean, soft sand and a playground nearby.</p>
+                <p><strong>Highlights:</strong> Very shallow water entry, playground equipment, nearby cafes and restaurants, beautiful sunset views.</p>
+                <p><strong>Facilities:</strong> Restrooms, showers, changing areas, nearby cafes, parking.</p>
+                <p><strong>Best for toddlers:</strong> The extremely gentle slope and shallow water make this an ideal first beach experience for your 1-year-old.</p>
+            </div>
+
+            <div class="card">
+                <h3>Sesoko Island & Beach</h3>
+                <div class="beach-img">
+                    <p>Image: Sesoko Beach with white sand and clear waters</p>
+                </div>
+                <p>Sesoko Island is connected to the main island by the 762-meter Sesoko Bridge. The beach features white sand and crystal clear waters with coral reefs visible from the shore. It's less crowded than many main island beaches, offering a more natural experience.</p>
+                <p><strong>Highlights:</strong> Scenic bridge drive, clear waters, coral reefs visible from shore, natural setting.</p>
+                <p><strong>Facilities:</strong> Basic restrooms, showers, some shade from trees, limited food options.</p>
+                <p><strong>Best for toddlers:</strong> Morning visits when the water is calmest, natural shade areas, gradual beach slope.</p>
+            </div>
+
+            <div class="card">
+                <h3>Kouri Island & Beach</h3>
+                <div class="beach-img">
+                    <p>Image: Kouri Beach with heart-shaped rocks and crystal clear waters</p>
+                </div>
+                <p>Kouri Island is connected to Yagaji Island by the 2km-long Kouri Bridge, offering spectacular ocean views during the drive. The beach is known for its white sand, crystal clear waters, and famous heart-shaped rocks. The island has a relaxed atmosphere with several cafes offering ocean views.</p>
                 <p><strong>Highlights:</strong> Heart-shaped rock formations, shallow waters ideal for toddlers, beautiful views of the Kouri Bridge.</p>
                 <p><strong>Facilities:</strong> Restrooms, showers, nearby cafes and restaurants.</p>
-                <p><strong>Best time to visit:</strong> Morning to early afternoon when the sun isn't too strong.</p>
-            </div>
-
-            <div class="card">
-                <h3>Okinawa Churaumi Aquarium</h3>
-                <div class="attraction-img" style="background-color: #ade8f4; display: flex; justify-content: center; align-items: center;">
-                    <p>Image: Churaumi Aquarium's massive Kuroshio Sea tank with whale sharks</p>
-                </div>
-                <p>One of the largest aquariums in the world, featuring the massive Kuroshio Sea tank where whale sharks and manta rays swim. The aquarium has numerous exhibits showcasing Okinawa's diverse marine life, from colorful coral reefs to deep-sea creatures.</p>
-                <p><strong>Highlights:</strong> Kuroshio Sea tank, dolphin shows, coral reef exhibits, touch pools, outdoor playground.</p>
-                <p><strong>Facilities:</strong> Restaurants, gift shops, nursing rooms, stroller rentals, rest areas.</p>
-                <p><strong>Best for toddlers:</strong> The colorful fish displays, touch pools, and outdoor playground areas.</p>
-            </div>
-
-            <div class="card">
-                <h3>Nago Pineapple Park</h3>
-                <div class="attraction-img" style="background-color: #ffef9f; display: flex; justify-content: center; align-items: center;">
-                    <p>Image: Pineapple-shaped carts at Nago Pineapple Park</p>
-                </div>
-                <p>A theme park dedicated to pineapples, where visitors can ride pineapple-shaped carts through pineapple fields and tropical gardens. The park offers various pineapple products to taste and purchase.</p>
-                <p><strong>Highlights:</strong> Pineapple cart ride, tropical fruit tasting, Dinosaur Adventure area, gift shop with unique pineapple products.</p>
-                <p><strong>Facilities:</strong> Restrooms, cafe, gift shop, parking.</p>
-                <p><strong>Best for toddlers:</strong> The colorful cart ride and dinosaur displays.</p>
+                <p><strong>Best for toddlers:</strong> Several shallow, protected areas perfect for water play.</p>
             </div>
         </div>
 
         <div class="container">
             <div class="card">
-                <h3>Southeast Botanical Gardens</h3>
-                <div class="attraction-img" style="background-color: #b5e48c; display: flex; justify-content: center; align-items: center;">
-                    <p>Image: Lush tropical plants and water features at Southeast Botanical Gardens</p>
+                <h3>Nago Pineapple Park</h3>
+                <div class="beach-img">
+                    <p>Image: Pineapple-shaped carts at Nago Pineapple Park</p>
                 </div>
-                <p>A sprawling botanical garden featuring tropical and subtropical plants from around the world. The garden is divided into different themed areas, including a water garden, fruit garden, and palm garden.</p>
-                <p><strong>Highlights:</strong> Water lily pond, tropical fruit trees, palm collection, seasonal flower displays.</p>
-                <p><strong>Facilities:</strong> Cafe, gift shop, restrooms, stroller-friendly paths.</p>
-                <p><strong>Best for toddlers:</strong> Open spaces to explore, water features, and shaded areas for rest.</p>
+                <p>Nago Pineapple Park is a quirky and fun attraction dedicated to Okinawa's famous pineapples. Visitors ride in pineapple-shaped carts through tropical gardens filled with pineapple plants. The park also offers pineapple product tastings, including pineapple wine for adults and pineapple juice for children.</p>
+                <p><strong>Highlights:</strong> Pineapple-shaped cart ride, tropical garden tour, product tastings, gift shop with unique pineapple products.</p>
+                <p><strong>Facilities:</strong> Restrooms, café, gift shop, stroller-accessible paths.</p>
+                <p><strong>Best for toddlers:</strong> Colorful environment, fun cart ride, sweet treats, sensory experiences.</p>
+            </div>
+
+            <div class="card">
+                <h3>Southeast Botanical Gardens</h3>
+                <div class="beach-img">
+                    <p>Image: Tropical plants at Southeast Botanical Gardens</p>
+                </div>
+                <p>The Southeast Botanical Gardens feature a beautiful collection of tropical and subtropical plants spread across 40 hectares. The gardens include a water lily pond, palm tree garden, and various themed areas. It's a peaceful place to stroll and enjoy nature in a more controlled environment.</p>
+                <p><strong>Highlights:</strong> Tropical plants and flowers, water garden, themed areas, seasonal flower displays.</p>
+                <p><strong>Facilities:</strong> Restrooms, café, gift shop, stroller-friendly paths.</p>
+                <p><strong>Best for toddlers:</strong> Open spaces to explore, colorful flowers, water features, shaded areas for rest.</p>
             </div>
 
             <div class="card">
                 <h3>Blue Seal Ice Park</h3>
-                <div class="attraction-img" style="background-color: #cdb4db; display: flex; justify-content: center; align-items: center;">
-                    <p>Image: Ice cream making experience at Blue Seal Ice Park</p>
+                <div class="beach-img">
+                    <p>Image: Ice cream making at Blue Seal Ice Park</p>
                 </div>
-                <p>A popular ice cream factory where visitors can learn about ice cream production and create their own original ice cream flavors. Blue Seal is an iconic Okinawan ice cream brand with a history dating back to 1948.</p>
-                <p><strong>Highlights:</strong> Ice cream making experience, factory tour, tasting various flavors.</p>
-                <p><strong>Facilities:</strong> Ice cream shop, cafe, gift shop, restrooms.</p>
-                <p><strong>Best for toddlers:</strong> Colorful environment and, of course, ice cream tasting!</p>
+                <p>Blue Seal is Okinawa's famous ice cream brand, and at the Ice Park, visitors can learn about ice cream making and even create their own flavors. The facility includes a factory tour, ice cream making workshop, and of course, plenty of opportunities to taste different flavors.</p>
+                <p><strong>Highlights:</strong> Ice cream making workshop, factory tour, tasting various flavors, gift shop with exclusive items.</p>
+                <p><strong>Facilities:</strong> Restrooms, ice cream shop, gift shop, air-conditioned interior.</p>
+                <p><strong>Best for toddlers:</strong> Colorful environment, sweet treats, sensory experiences with different flavors and textures.</p>
             </div>
+        </div>
 
-            <div class="card">
-                <h3>Kokusai Street Shopping District</h3>
-                <div class="attraction-img" style="background-color: #ffd6ff; display: flex; justify-content: center; align-items: center;">
-                    <p>Image: Vibrant shops and restaurants along Kokusai Street</p>
-                </div>
-                <p>The main shopping street in Naha City, stretching about 1.6 km with approximately 600 stores and businesses. The street offers everything from souvenir shops to restaurants, clothing stores, and local craft shops.</p>
-                <p><strong>Highlights:</strong> Souvenir shopping, local cuisine, connected covered shopping arcades including Makishi Public Market.</p>
-                <p><strong>Facilities:</strong> Numerous restaurants, shops, restrooms, some areas with seating.</p>
-                <p><strong>Best for toddlers:</strong> The covered shopping arcades provide shelter from sun or rain, and there are many colorful displays to keep little ones entertained.</p>
-            </div>
+        <div class="card">
+            <h3>Toddler-Friendly Considerations</h3>
+            <p>All locations in this itinerary were selected with your 1-year-old in mind. Here are the specific features we prioritized:</p>
+            <ul>
+                <li><strong>For Beaches:</strong>
+                    <ul>
+                        <li>Gentle Water Entry: Beaches with gradual slopes and shallow areas</li>
+                        <li>Protected Areas: Locations with natural barriers or coves that minimize waves</li>
+                        <li>Clean Sand: Soft, clean sand for comfortable play</li>
+                        <li>Shade Options: Natural shade or nearby facilities offering protection from the sun</li>
+                    </ul>
+                </li>
+                <li><strong>For Human-Made Attractions:</strong>
+                    <ul>
+                        <li>Stroller Accessibility: Smooth paths and ramps</li>
+                        <li>Indoor/Shaded Areas: Protection from sun and rain</li>
+                        <li>Sensory Experiences: Colorful displays, interesting sounds, varied textures</li>
+                        <li>Comfortable Facilities: Clean restrooms with changing tables</li>
+                    </ul>
+                </li>
+                <li><strong>General Considerations:</strong>
+                    <ul>
+                        <li>Timing: Morning or late afternoon visits to avoid midday heat</li>
+                        <li>Duration: Activities limited to 2-3 hours to prevent overstimulation</li>
+                        <li>Escape Options: Nearby cafes or rest areas if your toddler needs a break</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
     </div>
 
@@ -880,20 +936,20 @@
                         <br>Address: 156 Kouri, Nakijin Village | Hours: 11:00-17:00</li>
                 </ul>
                 
-                <h4>Near Churaumi Aquarium</h4>
+                <h4>Near Nago Pineapple Park</h4>
                 <ul>
-                    <li><strong>Cafe Ocean Blue</strong> - Located inside the aquarium complex with a kids' menu and high chairs.
-                        <br>Address: Inside Okinawa Churaumi Aquarium, Motobu | Hours: 10:00-18:00</li>
-                    <li><strong>Restaurant Inoh</strong> - Family-friendly restaurant serving Okinawan cuisine near the aquarium.
-                        <br>Address: 424 Ishikawa, Motobu | Hours: 11:00-21:00</li>
+                    <li><strong>Pineapple Park Cafe</strong> - Serves pineapple-themed dishes and desserts.
+                        <br>Address: Inside Nago Pineapple Park | Hours: 9:00-18:00</li>
+                    <li><strong>Restaurant Ryugujo</strong> - Family-friendly restaurant with Okinawan and Japanese cuisine.
+                        <br>Address: 1195 Biimata, Nago | Hours: 11:00-21:00</li>
                 </ul>
                 
                 <h4>In Naha</h4>
                 <ul>
+                    <li><strong>Makishi Public Market Food Court (2nd floor)</strong> - Have seafood purchased downstairs cooked fresh.
+                        <br>Address: 2-10-1 Matsuo, Naha | Hours: 8:00-22:00</li>
                     <li><strong>Yunangi</strong> - Traditional Okinawan restaurant with private rooms suitable for families.
                         <br>Address: 3-1-6 Makishi, Naha | Hours: 11:30-15:00, 17:00-22:00</li>
-                    <li><strong>Makishi Public Market Food Court</strong> - Second floor of the market where you can buy fresh seafood on the first floor and have it cooked upstairs. Casual atmosphere good for families.
-                        <br>Address: 2-10-1 Matsuo, Naha | Hours: 8:00-22:00</li>
                 </ul>
             </div>
         </div>
@@ -1096,7 +1152,7 @@
                     <li><strong>Timing:</strong> Visit beaches in the morning when temperatures are milder.</li>
                     <li><strong>Shade:</strong> Bring or rent a beach umbrella or tent for sun protection.</li>
                     <li><strong>Water Safety:</strong> Many beaches have gentle slopes and calm waters, but always supervise closely.</li>
-                    <li><strong>Beach Facilities:</strong> Beaches like Emerald Beach and Zanpa Beach have restrooms and changing facilities.</li>
+                    <li><strong>Beach Facilities:</strong> Beaches like Araha Beach and Sesoko Beach have restrooms and changing facilities.</li>
                     <li><strong>Footwear:</strong> Bring water shoes for rocky areas and hot sand.</li>
                 </ul>
             </div>
